@@ -50,6 +50,7 @@ html{
     background: rgb(242, 232, 232);
     color: black;
     display:flex;
+    flex-direction: row;
     align-items: center;
     position: fixed;
     top: 0;
@@ -100,7 +101,7 @@ font-weight: bolder;
     display: flex;
     align-items: center;
     border: 5px solid transparent;
-    justify-content: s;
+    justify-content: space-between;
 }
 .leftside{
     width: 35%;
@@ -169,6 +170,7 @@ button:hover{
 .rightside img{
     width: 90%;
     height: 90%;
+    margin-left:4rem;
    
 }
 .container2{
@@ -193,22 +195,38 @@ button:hover{
     border-radius: 2rem;
     left: 33%;
 }
-.costumeclothes{
+/* .costumeclothes{
     width: 100%;
     height: auto;
     background-color:transparent;
     display: flex;
-   
+    flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
     
+} */
+.costumeclothes {
+    /* flex-direction: initial; */
+    /* width: 100%; */
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    flex-direction: display;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* display: inline-block; */
 }
+
+/* * {
+    margin: 0;
+    p */
 .products{
     transition: 0.5s;
     border-radius: 2rem;
     width: 30rem;
-    height: 48rem;
+    /* height: 48rem; */
     background:transparent;
     color:black ;
     display: flex;
@@ -216,7 +234,10 @@ button:hover{
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
+}
+a{
+    text-decoration: none;
 }
 .top{
     width: 100%;
@@ -232,7 +253,10 @@ button:hover{
     height: 100%;
     
 }
-
+header{
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 1,
@@ -515,7 +539,7 @@ background: radial-gradient(circle farthest-corner at center center, #FF5F00 0%,
 
 
  .login{
-    width: 30rem;
+    width: 20rem;
     height: 30rem;
     background-color:rgb(242, 232, 232);
     color: white;
@@ -608,3 +632,80 @@ background: radial-gradient(circle farthest-corner at center center, #FF5F00 0%,
         height: 100%;
     }
 }
+@media only screen and (max-width: 600px)
+ {
+   
+   .costumeclothes{
+    flex-direction: column;
+   } .maintext{
+        flex-direction: column;
+        
+    }
+    .leftside{
+        width: 100%;
+    }
+    .video{
+        position: static;
+    }
+    .first{
+        color: black;
+        /* height: 30%; */
+        font-size: 3.5rem;
+        padding: 1rem;
+        text-align: center;
+        width:100%;
+        margin-top:4rem;
+    }
+    .leftside{
+        margin-top: 8rem;
+    }
+    .icons{
+        margin-top: 2rem;
+    }
+    .logo{
+        margin-bottom: 4rem;
+    }
+    .rightside{
+        width: 100%;
+        justify-content: center;
+    }
+    .rightside img{
+      
+        width:auto;
+    }
+    .checkout{
+        width:24%;
+    }
+    .footer{
+        height:auto;
+    }
+    .upper{
+        flex-direction: column;
+    }
+    #b{
+        width:100%;
+    }
+    .iconsfooter{
+      align-items: center;
+      margin-top: 1em;
+
+    }
+    
+  .input{
+    margin-bottom: 2rem;
+  }
+#b p {
+    font-size: 1.9rem;
+    line-height: 2.7rem;
+    margin: auto;
+    padding: 3rem;
+}
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+}
+/* @media only screen and (min-width:768px) {
+    .maintext{
+        flex-direction: column;
+    } */
